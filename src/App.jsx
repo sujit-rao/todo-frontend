@@ -13,7 +13,7 @@ function App() {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:5000/api/get`)
+      .get(`https://todo-backend-orpin-psi.vercel.app/api/get`)
       .then((res) => setTodos(res.data))
       .catch((err) => console.log(err))
   }, [updateUI]);
@@ -22,7 +22,7 @@ function App() {
   const saveToDO = () => {
 
     axios
-      .post(`http://localhost:5000/api/save`, { toDo: input })
+      .post(`https://todo-backend-orpin-psi.vercel.app/api/save`, { toDo: input })
       .then((res) => {
         console.log(res.data);
         setInput("")

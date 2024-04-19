@@ -7,7 +7,7 @@ function ToDo({ text, id, setUpdateUI, setShowPopup }) {
 
 
   const deleteToDo = () => {
-    axios.delete(`http://localhost:5000/api/delete/${id}`)
+    axios.delete(`https://todo-backend-orpin-psi.vercel.app/api/delete/${id}`)
       .then(res => {
         console.log(res.data)
         setUpdateUI((setUpdateUI) => !setUpdateUI)
